@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 
+
+## Unigrams and bigrams collector / counter
+## (c) 2013 Huan Truong < _ @ tnhh.net >
+## Usage python uni.py corpus.txt
+
 import re
 import nltk
 from nltk.collocations import *
