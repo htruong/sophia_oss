@@ -1,4 +1,4 @@
-Sophia - Open Source Input Method Editor for Android
+Sophia - Intelligent Vietnamese Input Method Editor for Android
 ===
 
 A complete, ready-to-use, smart keyboard for Android. 
@@ -45,9 +45,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 #### Credits
 
-    The original code was pulled from Android Jelly Bean source code (AOSP) by @sugree. The binary works for Android 4.1 and above.
+The original code was pulled from Android Jelly Bean source code (AOSP) by @sugree. The binary works for Android 4.1 and above.
 
-    The toolchain are forked from https://github.com/sugree/android-thaiime.
+The toolchain are forked from https://github.com/sugree/android-thaiime.
 
 #### Prerequisites
 
