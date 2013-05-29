@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 ## Unigrams and bigrams collector / counter
 ## (c) 2013 Huan Truong < _ @ tnhh.net >
 ## Usage python uni.py corpus.txt
@@ -16,6 +15,25 @@ import math
 import gc
 import operator
 from nltk.corpus import stopwords
+
+
+def find_elm(arr, first, second):
+  # print arr
+  for i in range(len(arr)):
+    if ((arr[i][0][0] == first) and (arr[i][0][1] == second)):
+      return i
+    # else:
+      # print("Not match: ", arr[i][0], first, arr[i][1], second)
+
+  return -1
+
+def add_if_not_exist(arr, first, second, freq):
+  print ("Looking for", first, second)
+  if (find_elm(arr, first, second) == -1):
+    print ("Not found")
+    arr.append([[first, second], freq])
+  else:
+    print ("Found. Do nothing")
 
 
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout) 
@@ -100,7 +118,20 @@ scored = scored[:100000]
 
 print "Sorting again..."
 #sorted(bigram[0] for bigram, score in scored)  
-sorted(scored, key=lambda bigram:bigram[0][0])
+#sorted(scored, key=lambda bigram:bigram[0][0])
+
+print "Adding custom dictionary..."
+with codecs.open(sys.argv[2], "r", "utf-8") as f:
+      lines = f.readlines()
+      for line in lines:
+        words = line.strip("\n").split(" ")
+        if (len(words) >= 2):
+          for i in range(len(words) -1):
+            add_if_not_exist(scored, words[i], words[i+1], 0)
+
+print "Adding done, sorting again..."
+#sorted(bigram[0] for bigram, score in scored)  
+#sorted(scored, key=lambda bigram:bigram[0][0])
 
 print "Writing out results..."
 

@@ -7,7 +7,10 @@ Huan Truong's Computational Linguistic Toolkit
 Prerequisites
 ---
 
-Viet74K.txt - (c) Ho Ngoc Duc. Please download the file from Mr. Ho's website.
+Viet74K.txt - (c) Ho Ngoc Duc. 
+
+Python NLTK toolkit, whatever you have to do to get it.
+
 
 Programs
 ---
