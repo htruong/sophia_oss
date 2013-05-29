@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2012, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:latin="http://schemas.android.com/apk/res/com.htruong.inputmethod.latin"
+>
+    <switch>
+        <case
+            latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted"
+        >
+            <Key
+                latin:keyLabel="ฤ" />
+            <Key
+                latin:keyLabel="ฆ" />
+            <Key
+                latin:keyLabel="ฏ" />
+            <Key
+                latin:keyLabel="โ" />
+            <Key
+                latin:keyLabel="ฌ" />
+            <Key
+                latin:keyLabel="็" />
+            <Key
+                latin:keyLabel="๋" />
+            <Key
+                latin:keyLabel="ษ" />
+            <Key
+                latin:keyLabel="ศ" />
+            <Key
+                latin:keyLabel="ซ" />
+            <Key
+                latin:keyLabel="ฃ" />                
+        </case>
+        <default>
+            <Key
+                latin:keyLabel="ฟ"
+                latin:keyHintLabel="ฤ"
+                latin:additionalMoreKeys="ฤ" />
+            <Key
+                latin:keyLabel="ห"
+                latin:keyHintLabel="ฆ"
+                latin:additionalMoreKeys="ฆ" />
+            <Key
+                latin:keyLabel="ก"
+                latin:keyHintLabel="ฏ" 
+                latin:additionalMoreKeys="ฏ" />
+            <Key
+                latin:keyLabel="ด"
+                latin:keyHintLabel="โ"
+                latin:additionalMoreKeys="โ" />
+            <Key
+                latin:keyLabel="เ"
+                latin:keyHintLabel="ฌ"
+                latin:additionalMoreKeys="ฌ" />
+            <Key
+                latin:keyLabel="้"
+                latin:keyHintLabel="็"
+                latin:additionalMoreKeys="็" />
+            <Key
+                latin:keyLabel="่"
+                latin:keyHintLabel="๋"
+                latin:additionalMoreKeys="๋" />
+            <Key
+                latin:keyLabel="า"
+                latin:keyHintLabel="ษๅ"
+                latin:additionalMoreKeys="ษ,ๅ" />
+            <Key
+                latin:keyLabel="ส"
+                latin:keyHintLabel="ศ" 
+                latin:additionalMoreKeys="ศ" />
+            <Key
+                latin:keyLabel="ว"
+                latin:keyHintLabel="ซ"
+                latin:additionalMoreKeys="ซ" />
+            <Key
+                latin:keyLabel="ง"
+                latin:keyHintLabel="ฃ"
+                latin:additionalMoreKeys="ฃ" />                
+        </default>
+    </switch>
+</merge>

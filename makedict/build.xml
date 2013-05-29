@@ -1,0 +1,62 @@
+<project name="makedict" default="build" basedir=".">
+  <property environment="env" />
+  <property file="build.properties" />
+  <property file="../build.properties" />
+
+  <property name="compile.debug" value="true" />
+  <property name="compile.debuglevel" value="lines,vars,source" />
+
+  <property name="src.dir" value="src" />
+  <property name="lib.dir" value="../latinime/libs" />
+  <property name="tests.dir" value="tests" />
+  <property name="build.dir" value="build" />
+  <property name="classes.dir" value="${build.dir}/classes" />
+
+  <property name="jar.dist" value="${build.dir}/${ant.project.name}.jar" />
+  <property name="jar.main-class" value="com.sugree.inputmethod.latin.makedict.DictionaryMaker" />
+
+  <path id="project.classpath">
+    <pathelement location="${classes.dir}" />
+    <fileset dir="${lib.dir}" erroronmissingdir="false">
+      <include name="*.jar" />
+    </fileset>
+  </path>
+
+  <target name="init">
+    <mkdir dir="${classes.dir}" />
+  </target>
+
+  <target name="clean">
+    <delete dir="${build.dir}" failonerror="false" deleteonexit="true" />
+  </target>
+
+  <target name="prepare-resources" depends="init">
+    <copy todir="${classes.dir}" overwrite="true">
+      <fileset dir="${src.dir}" includes="**/*.properties,**/*.xml" />
+    </copy>
+  </target>
+
+  <target name="compile" depends="prepare-resources">
+    <javac
+      destdir="${classes.dir}"
+      debug="${compile.debug}"
+      debuglevel="${compile.debuglevel}">
+      <src path="${src.dir}" />
+      <compilerarg line="" />
+      <classpath path="../latinime/bin/classes" />
+      <classpath refid="project.classpath" />
+    </javac>
+  </target>
+
+  <target name="jar" depends="compile">
+    <jar destfile="${jar.dist}">
+      <fileset dir="../latinime/bin/classes" />
+      <fileset dir="${classes.dir}" />
+      <manifest>
+        <attribute name="Main-Class" value="${jar.main-class}" />
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="build" depends="jar" />
+</project>
