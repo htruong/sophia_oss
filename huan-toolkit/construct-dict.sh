@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python uni.py $1
+python uni.py $1 Viet74K.txt
 #/mnt/sdcard/Downloads/viwiki_txt/viwiki-latest-pages-articles.xml-1
 # python bi.py $1
 #/mnt/sdcard/Downloads/viwiki_txt/viwiki-latest-pages-articles.xml-1
