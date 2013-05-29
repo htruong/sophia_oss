@@ -21,7 +21,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="english_ime_name" msgid="7252517407088836577">"แป้นพิมพ์ Woontua"</string>
-    <string name="aosp_android_keyboard_ime_name" msgid="7877134937939182296">"Woontua Keyboard"</string>
+    <string name="aosp_android_keyboard_ime_name" msgid="7877134937939182296">"Sophia Keyboard"</string>
     <string name="english_ime_settings" msgid="6661589557206947774">"การตั้งค่าแป้นพิมพ์ Woontua"</string>
     <string name="english_ime_input_options" msgid="3909945612939668554">"ตัวเลือกการป้อนข้อมูล"</string>
     <string name="spell_checker_service_name" msgid="7338064335159755926">"แอนดรอยด์ตรวจสอบการสะกด"</string>
