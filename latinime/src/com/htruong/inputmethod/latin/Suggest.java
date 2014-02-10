@@ -264,7 +264,9 @@ public class Suggest implements Dictionary.WordCallback {
         LatinImeLogger.onAddSuggestedWord(typedWord, Suggest.DIC_USER_TYPED, Dictionary.UNIGRAM);
         mConsideredWord = consideredWord;
 
-        if (wordComposer.size() <= 1 && (correctionMode == CORRECTION_FULL_BIGRAM)) {
+        //if (wordComposer.size() <= 1 && (correctionMode == CORRECTION_FULL_BIGRAM)) {
+        if (true) {
+            /*
             // At first character typed, search only the bigrams
             mBigramSuggestions = new ArrayList<SuggestedWordInfo>(PREF_MAX_BIGRAMS);
 
@@ -296,8 +298,12 @@ public class Suggest implements Dictionary.WordCallback {
                     }
                 }
             }
+            */
 
-        } else if (wordComposer.size() > 1) {
+
+
+        //} else  { //if (wordComposer.size() > 1) {
+            
             final WordComposer wordComposerForLookup;
             if (mTrailingSingleQuotesCount > 0) {
                 wordComposerForLookup = new WordComposer(wordComposer);
@@ -315,6 +321,7 @@ public class Suggest implements Dictionary.WordCallback {
                 final Dictionary dictionary = mUnigramDictionaries.get(key);
                 dictionary.getWords(wordComposerForLookup, prevWordForBigram, this, proximityInfo);
             }
+            
         }
 
         final CharSequence whitelistedWord = capitalizeWord(mIsAllUpperCase,

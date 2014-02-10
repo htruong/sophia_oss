@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Title for Latin keyboard  -->
     <string name="english_ime_name">Sophia keyboard</string>
-    <!-- Application name for opensource Android keyboard. AOSP(Android Open Source Project) should not be translated. -->
+    <!-- Application name for opensource Android keyboard. Sophia(Android Open Source Project) should not be translated. -->
     <string name="aosp_android_keyboard_ime_name">Sophia keyboard</string>
     <!-- Title for Latin keyboard settings activity / dialog -->
     <string name="english_ime_settings">Sophia keyboard settings</string>
@@ -29,7 +29,7 @@
 
     <!-- Name of Android spell checker service -->
     <string name="spell_checker_service_name">Woontua spell checker</string>
-    <!-- Name of Android spell checker service. AOSP(Android Open Source Project) should not be translated. -->
+    <!-- Name of Android spell checker service. Sophia(Android Open Source Project) should not be translated. -->
     <string name="aosp_spell_checker_service_name">Woontua spell checker</string>
 
     <!-- Title for the spell checking service settings screen -->

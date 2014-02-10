@@ -76,7 +76,7 @@ public class SuggestionsView extends RelativeLayout implements OnClickListener,
     }
 
     // The maximum number of suggestions available. See {@link Suggest#mPrefMaxSuggestions}.
-    public static final int MAX_SUGGESTIONS = 18;
+    public static final int MAX_SUGGESTIONS = 25;
 
     static final boolean DBG = LatinImeLogger.sDBG;
 
@@ -99,7 +99,7 @@ public class SuggestionsView extends RelativeLayout implements OnClickListener,
     private SuggestedWords mSuggestedWords = SuggestedWords.EMPTY;
 
     private final SuggestionsViewParams mParams;
-    private static final float MIN_TEXT_XSCALE = 0.70f;
+    private static final float MIN_TEXT_XSCALE = 0.60f;
 
     private final UiHandler mHandler = new UiHandler(this);
 
@@ -130,9 +130,9 @@ public class SuggestionsView extends RelativeLayout implements OnClickListener,
     }
 
     private static class SuggestionsViewParams {
-        private static final int DEFAULT_SUGGESTIONS_COUNT_IN_STRIP = 3;
-        private static final int DEFAULT_CENTER_SUGGESTION_PERCENTILE = 40;
-        private static final int DEFAULT_MAX_MORE_SUGGESTIONS_ROW = 2;
+        private static final int DEFAULT_SUGGESTIONS_COUNT_IN_STRIP = 5;
+        private static final int DEFAULT_CENTER_SUGGESTION_PERCENTILE = 25;
+        private static final int DEFAULT_MAX_MORE_SUGGESTIONS_ROW = 3;
         private static final int PUNCTUATIONS_IN_STRIP = 5;
 
         public final int mPadding;
@@ -872,6 +872,10 @@ public class SuggestionsView extends RelativeLayout implements OnClickListener,
         if (!(tag instanceof Integer))
             return;
         final int index = (Integer) tag;
+        if (index == -1) {
+          showMoreSuggestions();
+          return;
+        }
         if (index >= mSuggestedWords.size())
             return;
 

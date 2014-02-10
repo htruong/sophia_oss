@@ -1,14 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         coreApp="true"
         package="com.htruong.inputmethod.latin"
-        android:versionCode="6"
-        android:versionName="1.0.6">
+        android:versionCode="10"
+        android:versionName="1.0.10">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16" />
+    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="16" />
 
     <application android:label="@string/aosp_android_keyboard_ime_name"
             android:icon="@drawable/ic_ime_settings"
